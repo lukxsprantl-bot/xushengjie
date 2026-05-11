@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>徐圣杰 | AI漫剧创作者个人站</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        .futuristic-border {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-vertical {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 2rem;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        /* 自定义滚动条 */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <!-- 侧边装饰条 (仿参考图) -->
+    <div class="fixed left-4 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-8 opacity-40 text-[10px] tracking-widest uppercase py-8 futuristic-border rounded-full px-2">
+        <span class="text-vertical">AI FASHION STYLIST</span>
+        <div class="w-1 h-12 bg-white/20"></div>
+        <span class="text-vertical">LOOKCHAIN</span>
+    </div>
+    
+    <div class="fixed right-4 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-8 opacity-40 text-[10px] tracking-widest uppercase py-8 futuristic-border rounded-full px-2">
+        <span class="text-vertical">DISCORD</span>
+        <span class="text-vertical">YOUTUBE</span>
+        <span class="text-vertical">INSTAGRAM</span>
+    </div>
+
+    <!-- 主容器 -->
+    <main class="max-w-7xl mx-auto space-y-6">
+        
+        <!-- 导航与头部 -->
+        <header class="flex flex-wrap items-center justify-between gap-4 py-4 px-6 futuristic-border rounded-full bg-black/50 sticky top-4 z-50 backdrop-blur-md">
+            <div class="font-black text-xl tracking-tighter">XU.SJ</div>
+            <nav class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest">
+                <a href="#home" class="hover:text-gray-400">首页</a>
+                <a href="#about" class="hover:text-gray-400">关于我</a>
+                <a href="#services" class="hover:text-gray-400">业务</a>
+                <a href="#portfolio" class="hover:text-gray-400">作品</a>
+                <a href="#contact" class="hover:text-gray-400">联系</a>
+            </nav>
+            <a href="#contact" class="bg-white text-black px-6 py-2 rounded-full text-xs font-bold uppercase hover:bg-gray-200 transition-colors">
+                开始合作
+            </a>
+        </header>
+
+        <!-- Hero Section (首页) -->
+        <section id="home" class="grid grid-cols-1 lg:grid-cols-12 gap-6 min-h-[80vh]">
+            <!-- 左侧标语区 -->
+            <div class="lg:col-span-7 flex flex-col justify-center p-8 lg:p-16 rounded-[3rem] futuristic-border relative overflow-hidden bg-gradient-to-br from-neutral-900 to-black">
+                <div class="absolute top-8 left-8 text-xs font-mono opacity-50 uppercase tracking-widest">STYLE IN SECONDS</div>
+                
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none mt-8">
+                    AI 赋形<br>
+                    <span class="text-neutral-500">漫剧传情</span>
+                </h1>
+                
+                <p class="mt-8 text-neutral-400 max-w-md text-sm md:text-base leading-relaxed">
+                    用技术还原脑洞，用画面讲述故事。全流程AI漫剧创作，从脚本到成片，解锁漫剧创作的新可能。
+                </p>
+
+                <div class="mt-12 flex flex-wrap gap-4">
+                    <button class="bg-white text-black px-10 py-5 rounded-full font-black text-lg flex items-center gap-4 hover-scale">
+                        浏览作品 <span class="bg-black text-white rounded-full w-8 h-8 flex items-center justify-center text-xl">+</span>
+                    </button>
+                    <div class="flex items-center gap-3 px-6 py-4 glass-card futuristic-border">
+                        <div class="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center overflow-hidden">
+                             <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="avatar">
+                        </div>
+                        <div>
+                            <div class="text-xs font-bold uppercase opacity-50 tracking-widest">创作者</div>
+                            <div class="text-sm font-bold tracking-tight">徐圣杰</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧视觉图 (仿参考图) -->
+            <div class="lg:col-span-5 rounded-[3rem] overflow-hidden relative group">
+                <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=1000" 
+                     class="w-full h-full object-cover grayscale brightness-75 transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" alt="Cyberpunk Aesthetic">
+                
+                <!-- 浮动标签 -->
+                <div class="absolute top-8 right-8 p-6 glass-card futuristic-border space-y-1">
+                    <div class="text-3xl font-black tracking-tighter">15+</div>
+                    <div class="text-[10px] uppercase tracking-widest opacity-60">合作平台</div>
+                </div>
+
+                <div class="absolute bottom-8 left-8 right-8 p-6 glass-card futuristic-border">
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <div class="text-4xl font-black tracking-tighter">98%</div>
+                            <div class="text-[10px] uppercase tracking-widest opacity-60">视觉还原精准度</div>
+                        </div>
+                        <div class="text-[10px] uppercase tracking-widest opacity-40 font-mono">CODE: DIGITAL_FIT_#027</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关于我 Section -->
+        <section id="about" class="bg-white text-black rounded-[3rem] p-8 md:p-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-none">
+                        以AI为笔<br>以剧情为魂
+                    </h2>
+                    <p class="mt-8 text-lg font-medium opacity-80 leading-relaxed">
+                        我是徐圣杰，一名专注于AI漫剧全流程创作的创作者。始终坚持“技术服务内容，画面传递情绪”的创作理念。
+                    </p>
+                </div>
+                <div class="space-y-6">
+                    <div class="flex gap-4 items-start pb-6 border-b border-black/10">
+                        <span class="font-mono text-sm opacity-50">01.</span>
+                        <p class="text-sm leading-relaxed">
+                            深耕漫剧领域多年，精通 <b>Midjourney、Runway、Stable Diffusion</b> 等AI工具。
+                        </p>
+                    </div>
+                    <div class="flex gap-4 items-start pb-6 border-b border-black/10">
+                        <span class="font-mono text-sm opacity-50">02.</span>
+                        <p class="text-sm leading-relaxed">
+                            兼顾脚本撰写、AI绘图、分镜设计、剪辑合成全流程，让脑洞精准落地为高质量作品。
+                        </p>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <span class="font-mono text-sm opacity-50">03.</span>
+                        <p class="text-sm leading-relaxed">
+                            累计完成多部原创及合作漫剧，覆盖短视频、漫画平台，收获累计播放 <b>百万级+</b>。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 业务介绍 Section -->
+        <section id="services" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="p-8 futuristic-border rounded-[2rem] hover:bg-neutral-900 transition-colors group">
+                    <div class="w-10 h-10 bg-white rounded-full mb-6 flex items-center justify-center text-black font-black">1</div>
+                    <h3 class="text-xl font-black mb-4 uppercase tracking-tight group-hover:text-white transition-colors">原创漫剧创作</h3>
+                    <p class="text-xs text-neutral-500 leading-relaxed">从脚本构思到分镜剪辑，全流程独立完成，打造专属原创漫剧IP。</p>
+                </div>
+                <div class="p-8 futuristic-border rounded-[2rem] hover:bg-neutral-900 transition-colors group">
+                    <div class="w-10 h-10 bg-white rounded-full mb-6 flex items-center justify-center text-black font-black">2</div>
+                    <h3 class="text-xl font-black mb-4 uppercase tracking-tight group-hover:text-white transition-colors">漫剧定制服务</h3>
+                    <p class="text-xs text-neutral-500 leading-relaxed">根据脚本快速落地成品，适配品牌宣传、故事推广等多种场景。</p>
+                </div>
+                <div class="p-8 futuristic-border rounded-[2rem] hover:bg-neutral-900 transition-colors group">
+                    <div class="w-10 h-10 bg-white rounded-full mb-6 flex items-center justify-center text-black font-black">3</div>
+                    <h3 class="text-xl font-black mb-4 uppercase tracking-tight group-hover:text-white transition-colors">AI漫剧代制作</h3>
+                    <p class="text-xs text-neutral-500 leading-relaxed">解决技术瓶颈，承接半成品加工、AI素材生成、剪辑优化等单项服务。</p>
+                </div>
+                <div class="p-8 futuristic-border rounded-[2rem] hover:bg-neutral-900 transition-colors group">
+                    <div class="w-10 h-10 bg-white rounded-full mb-6 flex items-center justify-center text-black font-black">4</div>
+                    <h3 class="text-xl font-black mb-4 uppercase tracking-tight group-hover:text-white transition-colors">脚本撰写服务</h3>
+                    <p class="text-xs text-neutral-500 leading-relaxed">撰写贴合题材、节奏紧凑的脚本，适配治愈、悬疑、搞笑等风格。</p>
+                </div>
+            </div>
+            <!-- 服务优势 -->
+            <div class="p-8 glass-card futuristic-border flex flex-wrap items-center justify-between gap-8">
+                <div class="flex items-center gap-4">
+                    <span class="text-2xl">⚡</span>
+                    <span class="text-xs font-bold uppercase tracking-widest">制作周期短/效率高</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="text-2xl">🎨</span>
+                    <span class="text-xs font-bold uppercase tracking-widest">风格多样/按需定制</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="text-2xl">🤝</span>
+                    <span class="text-xs font-bold uppercase tracking-widest">一对一沟通/精准匹配</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 作品分类 Section -->
+        <section id="portfolio" class="space-y-6">
+            <div class="flex justify-between items-end px-4">
+                <h2 class="text-4xl font-black tracking-tighter uppercase">PORTFOLIO / 作品集</h2>
+                <span class="text-[10px] uppercase tracking-[0.3em] opacity-40">SCROLL TO EXPLORE</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 分类卡片示例 -->
+                <div class="group relative aspect-video rounded-[2rem] overflow-hidden futuristic-border bg-neutral-900">
+                    <div class="absolute inset-0 bg-black/60 group-hover:bg-black/20 transition-all z-10"></div>
+                    <div class="absolute bottom-6 left-6 z-20">
+                        <span class="text-[10px] px-2 py-1 bg-white text-black font-bold mb-2 inline-block">01.</span>
+                        <h4 class="text-2xl font-black tracking-tight uppercase">原创IP漫剧</h4>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
+                </div>
+                
+                <div class="group relative aspect-video rounded-[2rem] overflow-hidden futuristic-border bg-neutral-900">
+                    <div class="absolute inset-0 bg-black/60 group-hover:bg-black/20 transition-all z-10"></div>
+                    <div class="absolute bottom-6 left-6 z-20">
+                        <span class="text-[10px] px-2 py-1 bg-white text-black font-bold mb-2 inline-block">02.</span>
+                        <h4 class="text-2xl font-black tracking-tight uppercase">定制漫剧案例</h4>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
+                </div>
+
+                <div class="group relative aspect-video rounded-[2rem] overflow-hidden futuristic-border bg-neutral-900">
+                    <div class="absolute inset-0 bg-black/60 group-hover:bg-black/20 transition-all z-10"></div>
+                    <div class="absolute bottom-6 left-6 z-20">
+                        <span class="text-[10px] px-2 py-1 bg-white text-black font-bold mb-2 inline-block">03.</span>
+                        <h4 class="text-2xl font-black tracking-tight uppercase">剧情向漫剧</h4>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1633167606207-d840b5070fc2?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
+                </div>
+
+                <div class="group relative aspect-video rounded-[2rem] overflow-hidden futuristic-border bg-neutral-900">
+                    <div class="absolute inset-0 bg-black/60 group-hover:bg-black/20 transition-all z-10"></div>
+                    <div class="absolute bottom-6 left-6 z-20">
+                        <span class="text-[10px] px-2 py-1 bg-white text-black font-bold mb-2 inline-block">04.</span>
+                        <h4 class="text-2xl font-black tracking-tight uppercase">短视频漫剧</h4>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1626544827763-d516dce335e2?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
+                </div>
+
+                <div class="group relative aspect-video rounded-[2rem] overflow-hidden futuristic-border bg-neutral-900">
+                    <div class="absolute inset-0 bg-black/60 group-hover:bg-black/20 transition-all z-10"></div>
+                    <div class="absolute bottom-6 left-6 z-20">
+                        <span class="text-[10px] px-2 py-1 bg-white text-black font-bold mb-2 inline-block">05.</span>
+                        <h4 class="text-2xl font-black tracking-tight uppercase">AI漫剧片段合集</h4>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1614728263952-84ea256f9679?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
+                </div>
+
+                <div class="group relative aspect-video rounded-[2rem] overflow-hidden futuristic-border bg-neutral-900">
+                    <div class="absolute inset-0 bg-black/60 group-hover:bg-black/20 transition-all z-10"></div>
+                    <div class="absolute bottom-6 left-6 z-20">
+                        <span class="text-[10px] px-2 py-1 bg-white text-black font-bold mb-2 inline-block">06.</span>
+                        <h4 class="text-2xl font-black tracking-tight uppercase">合作漫剧作品</h4>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系方式 Section -->
+        <footer id="contact" class="p-8 md:p-16 glass-card futuristic-border mt-12 relative overflow-hidden">
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-5xl md:text-7xl font-black tracking-tighter uppercase mb-6">联络<br>创作者</h2>
+                    <p class="text-neutral-400 max-w-md mb-8">
+                        若你有漫剧创作、定制、合作等需求，欢迎随时联系我，一对一沟通需求，高效推进合作。
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 group cursor-pointer">
+                            <div class="w-12 h-12 glass-card flex items-center justify-center text-xl group-hover:bg-white group-hover:text-black transition-all">
+                                📱
+                            </div>
+                            <div>
+                                <div class="text-[10px] uppercase opacity-40 font-bold">微信 / WeChat</div>
+                                <div class="font-bold">[你的微信号]</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 group cursor-pointer">
+                            <div class="w-12 h-12 glass-card flex items-center justify-center text-xl group-hover:bg-white group-hover:text-black transition-all">
+                                ✉️
+                            </div>
+                            <div>
+                                <div class="text-[10px] uppercase opacity-40 font-bold">邮箱 / Email</div>
+                                <div class="font-bold">[你的邮箱地址]</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 group cursor-pointer">
+                            <div class="w-12 h-12 glass-card flex items-center justify-center text-xl group-hover:bg-white group-hover:text-black transition-all">
+                                🚀
+                            </div>
+                            <div>
+                                <div class="text-[10px] uppercase opacity-40 font-bold">社交平台 / Social</div>
+                                <div class="font-bold">[抖音/小红书/B站账号]</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white text-black p-8 md:p-12 rounded-[2rem] space-y-6">
+                    <div class="text-3xl font-black tracking-tighter uppercase leading-tight">
+                        把心中的故事<br>变成可观看的漫剧佳作
+                    </div>
+                    <div class="w-16 h-1 bg-black"></div>
+                    <p class="text-sm opacity-70 italic font-medium">
+                        "技术服务内容，画面传递情绪"
+                    </p>
+                    <button class="w-full bg-black text-white py-4 rounded-full font-bold uppercase tracking-widest hover:bg-neutral-800 transition-colors">
+                        发送消息 →
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 背景装饰大字 -->
+            <div class="absolute -bottom-10 -right-10 text-[15rem] font-black opacity-[0.03] pointer-events-none uppercase leading-none select-none">
+                AI DRAMA
+            </div>
+        </footer>
+
+        <!-- 版权 -->
+        <div class="py-12 text-center text-[10px] uppercase tracking-[0.4em] opacity-30">
+            © 2024 徐圣杰 AI漫剧创作 | ALL RIGHTS RESERVED
+        </div>
+
+    </main>
+
+    <script>
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
