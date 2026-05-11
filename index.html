@@ -42,6 +42,26 @@
             background: #333;
             border-radius: 10px;
         }
+        /* 轮播样式 */
+        .carousel-slides {
+            position: relative;
+            width: 100%;
+        }
+        .carousel-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .carousel-slide.active {
+            position: relative;
+            opacity: 1;
+        }
+        .carousel-indicator.active {
+            background: white !important;
+        }
     </style>
 </head>
 <body class="p-4 md:p-8">
@@ -84,8 +104,8 @@
                 <div class="absolute top-8 left-8 text-xs font-mono opacity-50 uppercase tracking-widest">STYLE IN SECONDS</div>
                 
                 <h1 class="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none mt-8">
-                    AI 赋形<br>
-                    <span class="text-neutral-500">漫剧传情</span>
+                    AI 漫剧<br>
+                    <span class="text-neutral-500">   全链路</span>
                 </h1>
                 
                 <p class="mt-8 text-neutral-400 max-w-md text-sm md:text-base leading-relaxed">
@@ -98,7 +118,7 @@
                     </button>
                     <div class="flex items-center gap-3 px-6 py-4 glass-card futuristic-border">
                         <div class="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center overflow-hidden">
-                             <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="avatar">
+                             <img src="01f.jpg" alt="avatar">
                         </div>
                         <div>
                             <div class="text-xs font-bold uppercase opacity-50 tracking-widest">创作者</div>
@@ -108,18 +128,42 @@
                 </div>
             </div>
 
-            <!-- 右侧视觉图 (仿参考图) -->
+            <!-- 右侧轮播图 -->
             <div class="lg:col-span-5 rounded-[3rem] overflow-hidden relative group">
-                <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=1000" 
-                     class="w-full h-full object-cover grayscale brightness-75 transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" alt="Cyberpunk Aesthetic">
+                <!-- 轮播容器 -->
+                <div class="relative w-full">
+                    <!-- 轮播图片 -->
+                    <div class="carousel-slides">
+                        <img src="112.jpg" class="carousel-slide active w-full h-auto" alt="Slide 1">
+                        <img src="113.jpg" class="carousel-slide w-full h-auto" alt="Slide 2">
+                        <img src="114.jpg" class="carousel-slide w-full h-auto" alt="Slide 3">
+                        <img src="115.jpg" class="carousel-slide w-full h-auto" alt="Slide 4">
+                    </div>
+                    
+                    <!-- 轮播指示器 -->
+                    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                        <button class="carousel-indicator w-2 h-2 rounded-full bg-white/50 hover:bg-white transition-colors" data-index="0"></button>
+                        <button class="carousel-indicator w-2 h-2 rounded-full bg-white/50 hover:bg-white transition-colors" data-index="1"></button>
+                        <button class="carousel-indicator w-2 h-2 rounded-full bg-white/50 hover:bg-white transition-colors" data-index="2"></button>
+                        <button class="carousel-indicator w-2 h-2 rounded-full bg-white/50 hover:bg-white transition-colors" data-index="3"></button>
+                    </div>
+                    
+                    <!-- 左右切换按钮 -->
+                    <button class="carousel-prev absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 glass-card flex items-center justify-center text-white hover:bg-white hover:text-black transition-all z-20">
+                        ←
+                    </button>
+                    <button class="carousel-next absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 glass-card flex items-center justify-center text-white hover:bg-white hover:text-black transition-all z-20">
+                        →
+                    </button>
+                </div>
                 
                 <!-- 浮动标签 -->
-                <div class="absolute top-8 right-8 p-6 glass-card futuristic-border space-y-1">
+                <div class="absolute top-8 right-8 p-6 glass-card futuristic-border space-y-1 z-20">
                     <div class="text-3xl font-black tracking-tighter">15+</div>
                     <div class="text-[10px] uppercase tracking-widest opacity-60">合作平台</div>
                 </div>
 
-                <div class="absolute bottom-8 left-8 right-8 p-6 glass-card futuristic-border">
+                <div class="absolute bottom-8 left-8 right-8 p-6 glass-card futuristic-border z-20">
                     <div class="flex justify-between items-end">
                         <div>
                             <div class="text-4xl font-black tracking-tighter">98%</div>
@@ -146,7 +190,7 @@
                     <div class="flex gap-4 items-start pb-6 border-b border-black/10">
                         <span class="font-mono text-sm opacity-50">01.</span>
                         <p class="text-sm leading-relaxed">
-                            深耕漫剧领域多年，精通 <b>Midjourney、Runway、Stable Diffusion</b> 等AI工具。
+                            深耕漫剧领域多年，精通各类AI工具。
                         </p>
                     </div>
                     <div class="flex gap-4 items-start pb-6 border-b border-black/10">
@@ -158,7 +202,7 @@
                     <div class="flex gap-4 items-start">
                         <span class="font-mono text-sm opacity-50">03.</span>
                         <p class="text-sm leading-relaxed">
-                            累计完成多部原创及合作漫剧，覆盖短视频、漫画平台，收获累计播放 <b>百万级+</b>。
+                            累计完成多部原创及合作漫剧，覆盖短视频、漫画平台，收获累计播放。
                         </p>
                     </div>
                 </div>
@@ -285,7 +329,7 @@
                             </div>
                             <div>
                                 <div class="text-[10px] uppercase opacity-40 font-bold">微信 / WeChat</div>
-                                <div class="font-bold">[你的微信号]</div>
+                                <div class="font-bold">[电话/微信:15970954079]</div>
                             </div>
                         </div>
                         <div class="flex items-center gap-4 group cursor-pointer">
@@ -294,16 +338,12 @@
                             </div>
                             <div>
                                 <div class="text-[10px] uppercase opacity-40 font-bold">邮箱 / Email</div>
-                                <div class="font-bold">[你的邮箱地址]</div>
+                                <div class="font-bold">[邮箱地址：798425655@qq.com]</div>
                             </div>
                         </div>
                         <div class="flex items-center gap-4 group cursor-pointer">
-                            <div class="w-12 h-12 glass-card flex items-center justify-center text-xl group-hover:bg-white group-hover:text-black transition-all">
-                                🚀
                             </div>
                             <div>
-                                <div class="text-[10px] uppercase opacity-40 font-bold">社交平台 / Social</div>
-                                <div class="font-bold">[抖音/小红书/B站账号]</div>
                             </div>
                         </div>
                     </div>
@@ -331,7 +371,7 @@
 
         <!-- 版权 -->
         <div class="py-12 text-center text-[10px] uppercase tracking-[0.4em] opacity-30">
-            © 2024 徐圣杰 AI漫剧创作 | ALL RIGHTS RESERVED
+            © 2025 徐圣杰 AI漫剧创作 | ALL RIGHTS RESERVED
         </div>
 
     </main>
@@ -345,6 +385,47 @@
                     behavior: 'smooth'
                 });
             });
+        });
+
+        // 轮播功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const indicators = document.querySelectorAll('.carousel-indicator');
+            const prevBtn = document.querySelector('.carousel-prev');
+            const nextBtn = document.querySelector('.carousel-next');
+            let currentIndex = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                    indicators[i].classList.remove('active');
+                });
+                slides[index].classList.add('active');
+                indicators[index].classList.add('active');
+                currentIndex = index;
+            }
+
+            function nextSlide() {
+                let newIndex = (currentIndex + 1) % slides.length;
+                showSlide(newIndex);
+            }
+
+            function prevSlide() {
+                let newIndex = (currentIndex - 1 + slides.length) % slides.length;
+                showSlide(newIndex);
+            }
+
+            // 点击指示器切换
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => showSlide(index));
+            });
+
+            // 点击左右按钮切换
+            prevBtn.addEventListener('click', prevSlide);
+            nextBtn.addEventListener('click', nextSlide);
+
+            // 自动轮播
+            setInterval(nextSlide, 4000);
         });
     </script>
 </body>
